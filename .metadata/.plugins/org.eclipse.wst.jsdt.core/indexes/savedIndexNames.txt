@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\pedro\OneDrive\Documentos\Estudos\TI\lab360\modulo_02\java\semana08\exercicio\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1384555155.index

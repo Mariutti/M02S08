@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\pedro\OneDrive\Documentos\Estudos\TI\lab360\modulo_02\java\semana08\exercicio\.metadata\.plugins\org.eclipse.jdt.core
+1384555155.index
+4127786356.index
+1865797976.index
+888438798.index
