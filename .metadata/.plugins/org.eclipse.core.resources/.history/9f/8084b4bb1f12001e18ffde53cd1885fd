@@ -1,0 +1,20 @@
+package repositories;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Pets;
+
+public class PetsRepository { 
+	
+	private static List<Pets> pets = new ArrayList<Pets>();
+	
+	public static void addPet(Pet pet) {
+		pets.add(pet);
+	};
+	
+	public static List getPets() {
+		return pets;
+	}
+
+}

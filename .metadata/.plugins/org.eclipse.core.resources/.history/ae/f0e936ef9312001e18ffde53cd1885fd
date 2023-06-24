@@ -1,0 +1,75 @@
+package repositories;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Pet;
+
+public class PetsRepository { 
+	
+	private static List<Pet> pets = new ArrayList<Pet>();
+	private static int id = 0;
+	
+	public static void createPet(Pet pet) {
+		if (pet != null) {
+			pet.setId(++id);
+			pets.add(pet);
+		}
+		listPets();
+	};
+	
+	public static String listPets() {
+		if(pets == null || pets.size() == 0) {
+			return "<h1>Lista de pets vazia</h1>";
+		}
+		String texto ="<h2>Lista de Pets: <ul>";
+		
+		for(Pet pet:pets) {
+			texto += "<li><ul>" +
+					"<li>id: " + pet.getId() +
+					"</li><li>nome: " + pet.getNome() + 
+					"</li><li>especie: " + pet.getEspecie() +
+					"</li><li>raca: " + pet.getRaca() + "</li></ul></li>";
+			
+		};
+		texto += "</ul>";
+		return texto;
+	}
+	
+	public static void updatePet(int id, Pet petCadastroNovo) {
+		Pet petCadastroatual=null;
+		
+		for(Pet pet: pets) {
+			if(pet.getId() == petCadastroNovo.getId()) {
+				petCadastroatual = pet;
+				break;
+			}
+		}
+		petCadastroatual.setId(petCadastroNovo.getId());
+		petCadastroatual.setEspecie(petCadastroNovo.getEspecie());
+		petCadastroatual.setNome(petCadastroNovo.getNome());
+		petCadastroatual.setRaca(petCadastroNovo.getRaca());
+		
+	}
+
+	@Override
+	public String toString() {
+		
+		String texto ="Lista de Pets: ";
+		
+		for(Pet pet:pets) {
+			texto += 
+					"id: " + pet.getId() +
+					", nome: " + pet.getNome() + 
+					", especie: " + pet.getEspecie() +
+					", raca: " + pet.getRaca() + ", ";
+			
+		};
+		return texto;
+	}
+	
+	
+	
+
+
+}

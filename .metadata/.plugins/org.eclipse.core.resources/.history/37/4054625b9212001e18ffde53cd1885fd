@@ -1,0 +1,53 @@
+package repositories;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Pet;
+
+public class PetsRepository { 
+	
+	private static List<Pet> pets = new ArrayList<Pet>();
+	private static int id = 0;
+	
+	public static void createPet(Pet pet) {
+		if (pet != null) {
+			pet.setId(++id);
+			pets.add(pet);
+		}
+	};
+	
+	public static String listPets() {
+		if(pets == null || pets.size() == 0) {
+			return "<h1>Lista de pets vazia</h1>";
+		}
+		return pets.toString();
+	}
+	
+	public static void updatePet(int id, Pet petCadastroNovo) {
+		Pet petCadastroatual=null;
+		
+		for(Pet pet: pets) {
+			if(pet.getId() == petCadastroNovo.getId()) {
+				petCadastroatual = pet;
+				break;
+			}
+		}
+		petCadastroatual.setId(petCadastroNovo.getId());
+		petCadastroatual.setEspecie(petCadastroNovo.getEspecie());
+		petCadastroatual.setNome(petCadastroNovo.getNome());
+		petCadastroatual.setRaca(petCadastroNovo.getRaca());
+		
+	}
+
+	@Override
+	public String toString() {
+		return "PetsRepository [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+	
+	
+
+
+}
