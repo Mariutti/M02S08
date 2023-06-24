@@ -43,3 +43,4 @@
 0:0:0:0:0:0:0:1 - - [24/Jun/2023:13:16:18 -0300] "POST /petshop/pets?nome=Bruce&especie=cachorro&raca=Dogue&peso=55 HTTP/1.1" 200 27
 0:0:0:0:0:0:0:1 - - [24/Jun/2023:13:16:27 -0300] "POST /petshop/pets?nome=Kai&especie=cachorro&raca=Shitzu&peso=5.5 HTTP/1.1" 200 25
 0:0:0:0:0:0:0:1 - - [24/Jun/2023:13:16:29 -0300] "GET /petshop/pets HTTP/1.1" 200 445
+127.0.0.1 - - [24/Jun/2023:15:11:24 -0300] "GET / HTTP/1.1" 404 763

@@ -25,6 +25,7 @@ public class PetsRepository {
 		return pets;
 	}
 	
+
 	
 	public static String listPets() {
 		if(pets == null || pets.size() == 0) {
@@ -45,6 +46,22 @@ public class PetsRepository {
 		return texto;
 	}
 	
+	public static void updatePet(int id, Pet petCadastroNovo) {
+		Pet petCadastroatual=null;
+		
+		for(Pet pet: pets) {
+			if(pet.getId() == petCadastroNovo.getId()) {
+				petCadastroatual = pet;
+				break;
+			}
+		}
+		petCadastroatual.setId(petCadastroNovo.getId());
+		petCadastroatual.setEspecie(petCadastroNovo.getEspecie());
+		petCadastroatual.setNome(petCadastroNovo.getNome());
+		petCadastroatual.setRaca(petCadastroNovo.getRaca());
+		
+	}
+
 	@Override
 	public String toString() {
 		
