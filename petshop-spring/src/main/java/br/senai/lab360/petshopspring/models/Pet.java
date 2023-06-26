@@ -1,7 +1,11 @@
 package br.senai.lab360.petshopspring.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pet {
 
+    public static List<Pet> pets = new ArrayList<>();
     private int id;
     private String nome;
     private String especie;
@@ -46,5 +50,26 @@ public class Pet {
 
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    public static String listarPets() {
+        String texto = "{";
+        for (Pet pet : pets) {
+            texto += "{ Pet id: " + pet.getId() + ", nome: " + pet.getNome() + ", especie: " + pet.getEspecie() + ", " +
+                    "raca: " + pet.getRaca() + ", " +
+                    "peso: " + pet.getPeso() + "}";
+        }
+        return texto;
+    }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", especie='" + especie + '\'' +
+                ", raca='" + raca + '\'' +
+                ", peso=" + peso +
+                '}';
     }
 }

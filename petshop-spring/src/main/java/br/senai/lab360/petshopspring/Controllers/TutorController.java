@@ -1,4 +1,4 @@
-package br.senai.lab360.petshopspring.Controller;
+package br.senai.lab360.petshopspring.Controllers;
 
 import org.springframework.web.bind.annotation.*;
 
