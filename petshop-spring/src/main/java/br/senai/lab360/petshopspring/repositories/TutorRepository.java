@@ -1,6 +1,5 @@
 package br.senai.lab360.petshopspring.repositories;
 
-import br.senai.lab360.petshopspring.models.Pet;
 import br.senai.lab360.petshopspring.models.Tutor;
 import org.springframework.stereotype.Repository;
 
@@ -59,4 +58,6 @@ public class TutorRepository {
         }
         return tutores.remove(findById(id));
     }
+
+
 }

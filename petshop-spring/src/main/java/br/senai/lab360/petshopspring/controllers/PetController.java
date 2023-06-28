@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/pets")
 public class PetController {
@@ -23,6 +25,10 @@ public class PetController {
         return petService.buscaPetPorId(id).toString();
     }
 
+    @GetMapping("/{idTutor}")
+    public List<Pet> findPetByTutor(@PathVariable("@PathVariable") int id){
+        return petService.buscaPetPorTutor(id);
+    }
     @PostMapping
     public Pet cadastraPet(@RequestBody Pet pet) {
         petService.cadastraPet(pet);

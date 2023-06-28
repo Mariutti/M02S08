@@ -12,6 +12,7 @@ public class Pet {
     private String especie;
     private String raca;
     private double peso;
+    private Tutor tutor;
 
     public int getId() {
         return id;
@@ -51,6 +52,14 @@ public class Pet {
 
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    public Tutor getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
     }
 
     public String listarPetsString() {

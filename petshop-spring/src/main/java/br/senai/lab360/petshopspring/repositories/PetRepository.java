@@ -80,5 +80,12 @@ public class PetRepository {
     }
 
 
-
+    public List<Pet> findPets(int idTutor) {
+        List<Pet> petListPorTutor = null;
+        for(Pet pet : pets){
+            if(pet.getTutor().getId()== idTutor)
+                petListPorTutor.add(pet);
+        }
+        return petListPorTutor;
+    }
 }
