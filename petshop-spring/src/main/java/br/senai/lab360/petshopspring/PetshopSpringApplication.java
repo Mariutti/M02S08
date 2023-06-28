@@ -12,12 +12,19 @@ public class PetshopSpringApplication {
 
 }
 
-//TODO Exercício 05
-//TODO Construa os Models para representar as entidades Tutores e Pets.
-//TODO Construa a lógica necessária do CRUD de Tutor e Pet.
-//TODO Para cada endpoint:
-//POST - Receber os dados como parâmetro e retornar a entidade cadastrada.
-//GET - Buscar todos os registros cadastrados da entidade.
-//PUT - Receber os dados necessários para edição como parâmetro e retornar a entidade alterada.
-//TODO DELETE - Receber os dados necessários para identificação e remoção da entidade correspondente e retornar um boolean indicando o sucesso.
-//Obs.: Pode salvar os registros em listas, não precisa conectar num banco de dados.
+
+//EXERCÍCIO 06
+//TODO Agora que temos as classes que representam as entidades (Models), vamos criar as classes de serviço e
+// repositório.
+//
+//TODO Crie uma para cada entidade:
+//
+//TODO Classe de serviço (@Service)
+//
+//TODO Classe de persistência (@Repository)(Para armazenamento e consulta das entidades)
+//
+//TODO As dependências deverão ser injetadas respeitando o fluxo:
+//
+//TODO Controller -> Service -> Repository
+//
+//TODO Transferir as listas que representam a persistência dos dados para as classes Repository correspondentes.
